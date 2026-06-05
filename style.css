@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+
+body {
+  background: #09090e;  
+  color: #f0f0f5;              
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;           
+}
+
+
+ul {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: #aaaaaa;  
+}
+
+
+a:hover {
+  color: #ffffff;
+}
+
+
+
+
+#navbar {
+  display: flex;          
+  align-items: center;        
+  justify-content: space-between; 
+  padding: 20px 60px;         
+  position: sticky;           
+  top: 0;
+  background-color: #111111;  
+  z-index: 100;               
+}
+
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;        
+  color: #ffffff;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 40px;   
+
+}
+
+.nav-links a {
+  font-size: 14px;
+}
+
+
+#navbar .nav-btn {
+  display: inline-block;
+  background-color: white;
+  color: #000000;
+  border: 1px solid #555555;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#navbar .nav-btn:hover {
+  background-color: #ffffff;
+  color: #09090e;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+
+.hero-tag {
+  display: inline-block;     
+  border: 1px solid #444444;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #aaaaaa;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  
+}
+
+.hero-title {
+  font-size: 100px;
+  font-weight: 100;
+  line-height: 1.17;
+  margin-bottom: 20px;
+}
+
+
+.hero-title span {
+ font-style: normal;
+  color: #666565;             
+}
+
+/* The smaller text under the headline */
+.hero-sub {
+  font-size: 16px;
+  color: #888888;
+  max-width: 420px;           
+  margin: 0 auto 35px;        
+}
+
+/* The row of buttons */
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* The filled "Shop now" button */
+.btn-primary {
+  background-color: #ffffff;
+  color: #111111;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #fffbfb;
+  color: #989595;
+}
+
+
+
+.hero-image {
+  margin-top: 30px;
+  display: flex;
+ justify-content: center;
+ 
+
+ border-radius: 10px;
+ background: linear-gradient(
+  to  bottom, #09090e 0%, #000000 10%, #000000 90%, #09090e 100%
+ );
+ 
+}
+
+.hero-image img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+
+
+.features,
+.steps,
+.cta {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+/* All section main headings */
+.features h2,
+.steps h2,
+.cta h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+
+.section-sub {
+  color: #888888;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+
+/* -----------------------------------------------
+   5. FEATURES SECTION (the 3 cards)
+----------------------------------------------- */
+
+/* The background is slightly lighter than the page */
+.features {
+  background-color: #09090e;
+      
+
+}
+.spec {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: rgba(240,240,245,0.45);
+      margin-bottom: 1.5rem;
+      margin-right: 48rem;
+}
+
+.feature-label{
+  margin-right: 570px;
+  padding-bottom: 4rem;
+}
+
+.feature-label h2{
+   font-family: sans-serif;
+   letter-spacing: 1px;
+   font-weight: lighter;
+}
+
+/* The row of three cards */
+.cards {
+  display: flex;              /* Put cards side by side */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;            /* Cards stack on small screens */
+  max-width: 900px;
+  margin: 0 auto;             /* Center the row */
+}
+
+/* Each individual card */
+.card {
+  background-color:   rgba(69, 69, 71, 0.2);;
+  border: 0.5px solid  #4d4745;
+  border-radius: 16px;
+  padding: 30px;
+  width: 260px;
+  text-align: left;
+   transition: background 0.3s;
+}
+
+/* The small grey icon box at the top of each card */
+/* .icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+} */
+
+/* The tiny square inside the icon box */
+.mini-square img {
+  border-radius: 8px;
+  background: #000000;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+.mini-square3 img {
+  border-radius: 8px;
+  background: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+/* Card title like "32hr battery" */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Card description text */
+.card p {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.6;
+}
+.line {
+  height: 1px;             
+  background-color: #4d4745; 
+  width: 100%;              
+  margin: 20px 0;           
+}
+
+
+/* How it works */
+
+.steps {
+  background-color: #09090e;
+}
+
+/* The column of steps */
+.step-list {
+  max-width: 560px;
+  margin: 0 auto;             /* Center the list */
+  text-align: left;
+}
+
+.step {
+  display: flex;              /* Number and text side by side */
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+
+.step-num {
+  background-color: #2a2a2a;
+  color: #aaaaaa;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;             
+}
+
+
+.step-text h4 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+
+.step-text p {
+  font-size: 14px;
+  color: #888888;
+}
+
+
+
+.cta {
+  background-color: #09090e;
+}
+
+.cta p {
+  color: #888888;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+
+.btn-large {
+  font-size: 17px;
+  padding: 16px 36px;
+  margin-bottom: 30px;
+}
+
+
+.price-note {
+  font-size: 14px;
+  color: #888888;
+  margin-top: 40px;
+}
+
+.price-note strong {
+  color: #ffffff;
+}
+
+
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px;
+  border-top: 1px solid #222222;  /* A thin line above the footer */
+  background-color: #111111;
+}
+
+
+.copyright {
+  font-size: 13px;
+  color: #b1adad;
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-links a {
+  font-size: 15px;
+  color: #c9c3c3;
+}
+
+.footer-links a:hover {
+  color: #d7d0d0;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  #navbar {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .nav-logo {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;        
+    color: #ffffff;
+  }
+
+ 
+  .hamburger {
+    display: flex;
+  }
+
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    background-color: #111111;
+    padding: 20px 0;
+    order: 3;
+  }
+
+ 
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+
+  #navbar .nav-btn {
+    display: none;
+  }
+
+  
+  .hero-title {
+    font-size: 36px;
+  }
+
+  
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+}
